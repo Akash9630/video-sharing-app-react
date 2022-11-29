@@ -4,11 +4,10 @@ import { Grid } from "@mui/material";
 import VideoItem from "./VideoItem";
 
 const VideoList = ({ videos, onVideoSelect }) => {
-    const listOfVideos = videos.map((video, index) => (
+    const listOfVideos = videos.map((video) => (
         <VideoItem
             onVideoSelect={onVideoSelect}
-            // key={video.id.videoId}
-            key={index}
+            key={video.id.videoId}
             video={video}
         />
     ));
